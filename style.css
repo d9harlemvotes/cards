@@ -1,0 +1,281 @@
+/* D9 Harlem Votes Cards — shared stylesheet */
+:root {
+  --red: #CB0606;
+  --black: #1A1A1A;
+  --green: #2F5F48;
+  --cream: #f5f1e8;
+  --rule: #e5e1d8;
+  --text: #2a2a2a;
+  --muted: #6b6b6b;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: #fafaf7;
+  line-height: 1.55;
+  font-size: 16px;
+}
+
+/* Top bar */
+.topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--rule);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.topbar .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+}
+.topbar .brand img {
+  width: 44px;
+  height: 44px;
+  display: block;
+}
+.topbar .brand .wordmark {
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.topbar .brand .wordmark .d9 { color: var(--red); }
+.topbar .brand .wordmark .h  { color: var(--black); }
+.topbar .brand .wordmark .v  { color: var(--green); }
+.topbar .back {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+}
+.topbar .back:hover { color: var(--red); }
+
+/* Tri-stripe */
+.stripe {
+  height: 6px;
+  display: flex;
+}
+.stripe .s-red   { flex: 1; background: var(--red); }
+.stripe .s-black { flex: 1; background: var(--black); }
+.stripe .s-green { flex: 1; background: var(--green); }
+
+/* Page container */
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 28px 22px 60px;
+}
+
+/* Card page */
+.topic-label {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+h1.card-name {
+  font-family: Georgia, serif;
+  font-size: 38px;
+  line-height: 1.1;
+  margin: 0 0 10px;
+  color: var(--black);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+}
+.tagline {
+  font-style: italic;
+  color: #555;
+  font-size: 17px;
+  line-height: 1.45;
+  margin: 0 0 24px;
+}
+.card-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  margin: 0 0 26px;
+}
+.subtitle {
+  font-style: italic;
+  color: #555;
+  font-size: 16px;
+  margin: 0 0 22px;
+}
+h2.section-label {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: 700;
+  margin: 26px 0 10px;
+}
+.section-body {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 20px;
+  color: var(--text);
+}
+.action-box {
+  background: #eaf0e8;
+  border-left: 4px solid var(--green);
+  padding: 16px 20px;
+  border-radius: 0 4px 4px 0;
+  margin: 22px 0 24px;
+}
+.action-box .action-label {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.action-box .action-body {
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--text);
+}
+.action-box .action-body em { font-style: italic; }
+.read-more {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 22px 0 0;
+  line-height: 1.5;
+}
+.read-more strong { color: var(--text); }
+.read-more a { color: var(--green); text-decoration: underline; text-underline-offset: 2px; }
+.read-more a:hover { color: var(--red); }
+
+/* Footer */
+.foot {
+  margin: 40px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--rule);
+  text-align: center;
+}
+.foot .browse {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+}
+.foot .browse:hover { background: #a30404; }
+.foot .meta {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  font-style: italic;
+}
+.foot .meta strong { color: var(--text); font-style: normal; }
+
+/* Index (deck landing) */
+.deck-header {
+  text-align: center;
+  margin: 4px 0 28px;
+}
+.deck-header h1 {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  color: var(--black);
+  margin: 0 0 12px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.deck-header .deck-tagline {
+  font-style: italic;
+  color: #555;
+  font-size: 16px;
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.deck-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin: 28px 0;
+}
+@media (min-width: 600px) {
+  .deck-grid { grid-template-columns: 1fr 1fr; }
+}
+.deck-tile {
+  display: block;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.deck-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.deck-tile img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.deck-tile .tile-body {
+  padding: 14px 16px 18px;
+}
+.deck-tile .tile-topic {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.deck-tile .tile-name {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+.deck-tile .tile-tag {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  h1.card-name { font-size: 30px; }
+  .tagline { font-size: 16px; }
+  .container { padding: 22px 18px 50px; }
+  .topbar { padding: 12px 16px; }
+  .topbar .brand img { width: 38px; height: 38px; }
+  .topbar .brand .wordmark { font-size: 15px; }
+  .deck-header h1 { font-size: 26px; }
+  .deck-header .deck-tagline { font-size: 15px; }
+  .deck-tile .tile-tag { font-size: 13px; }
+}
+@media (max-width: 380px) {
+  .deck-header h1 { font-size: 23px; }
+  .topbar .back { display: none; }
+}
